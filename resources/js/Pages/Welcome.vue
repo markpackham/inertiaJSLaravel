@@ -1,13 +1,14 @@
 <template>
     <div>
-        <h1>Welcome</h1>
-        <p>Hello welcome to your first Inertia app!</p>
+        <h1>Hello {{name}}</h1>
     </div>
 </template>
   
 <script>
 
 export default {
-
+    props: {
+        name: String,
+    }
 }
 </script>
