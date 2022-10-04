@@ -7,7 +7,7 @@
         <header class="flex justify-between">
             <div class="flex items-center">
                 <h1 class="font-bold text-lg">
-                    My App
+                    Inertia & Laravel 8
                 </h1>
 
                 <p class="text-sm ml-4">
