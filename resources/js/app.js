@@ -1,5 +1,7 @@
 import { createApp, h } from "vue";
-import { createInertiaApp } from "@inertiajs/inertia-vue3";
+import { createInertiaApp, Link, Head } from "@inertiajs/inertia-vue3";
+import { InertiaProgress } from "@inertiajs/progress";
+import Layout from "./Shared/Layout";
 
 createInertiaApp({
     resolve: (name) => require(`./Pages/${name}`),
