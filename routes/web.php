@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::inertia('/', 'Home');
+Route::inertia('/users', 'Users');
+Route::inertia('/settings', 'Settings');
