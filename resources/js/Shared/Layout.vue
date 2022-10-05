@@ -11,7 +11,7 @@
                 </h1>
 
                 <p class="text-sm ml-4">
-                    Welcome Back, {{ $page.props.auth.user.username}}!
+                    Welcome Back, {{ username }}!
                 </p>
             </div>
 
@@ -31,5 +31,11 @@ import Nav from "./Nav";
 
 export default {
     components: { Nav },
+
+    computed: {
+        username() {
+            return this.$page.props.auth.user.username;
+        }
+    }
 };
 </script>
