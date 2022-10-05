@@ -1,5 +1,7 @@
 <template>
-    <h1>Users</h1>
+    <h1 class="text-3xl">
+        Users
+    </h1>
 </template>
 
 <script>

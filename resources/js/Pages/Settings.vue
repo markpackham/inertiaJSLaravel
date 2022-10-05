@@ -1,7 +1,7 @@
 <template>
-    <h1>Settings</h1>
-</template>
+    <Head title="Settings" />
 
-<script>
-export default {};
-</script>
+    <h1 class="text-3xl">
+        Settings
+    </h1>
+</template>

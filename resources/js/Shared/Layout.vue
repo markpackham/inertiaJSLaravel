@@ -11,7 +11,7 @@
                 </h1>
 
                 <p class="text-sm ml-4">
-                    Welcome Back!
+                    Welcome Back, {{ $page.props.auth.user.username}}!
                 </p>
             </div>
 
