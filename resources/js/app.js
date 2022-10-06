@@ -4,12 +4,8 @@ import { InertiaProgress } from "@inertiajs/progress";
 import Layout from "./Shared/Layout";
 
 createInertiaApp({
-    resolve: (name) => {
-        let page = require(`./Pages/${name}`).default;
-
-        // if (page.layout === undefined) {
-        //     page.layout = Layout;
-        // }
+    resolve: async (name) => {
+        let page = (await import(`./Pages/${name}`)).default;
 
         // The logical nullish assignment (x ??= y) operator only assigns if x is nullish (null or undefined).
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment
