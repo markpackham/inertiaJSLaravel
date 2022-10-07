@@ -17,13 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::inertia('/', 'Home');
 
-Route::get('/users', function () {
-    return Inertia::render('Users', [
-        'users' => User::all()->map(fn ($user) => [
-            'name' => $user->name
-        ])
-    ]);
-});
+Route::get('/users', [UsersController::class, 'index']);
 
 Route::inertia('/settings', 'Settings');
 
