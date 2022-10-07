@@ -16,10 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::inertia('/', 'Home');
+Route::inertia('/settings', 'Settings');
 
 Route::get('/users', [UsersController::class, 'index']);
-
-Route::inertia('/settings', 'Settings');
+Route::get('/users/create', [UsersController::class, 'create']);
+Route::post('/users', [UsersController::class, 'store']);
 
 Route::post('/logout', function () {
     dd('Logging user out');
