@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User;
+use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::inertia('/', 'Home');
-Route::inertia('/users', 'Users');
+
+Route::get('/users', function () {
+    return Inertia::render('Users', [
+        'users' => User::all()->map(fn ($user) => [
+            'name' => $user->name
+        ])
+    ]);
+});
+
 Route::inertia('/settings', 'Settings');
 
 Route::post('/logout', function () {
