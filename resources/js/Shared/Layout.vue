@@ -1,5 +1,5 @@
 <template>
-    <Head>
+    <Head title="A Default Title">
         <meta type="description" content="Information about my app" head-key="description">
     </Head>
 
