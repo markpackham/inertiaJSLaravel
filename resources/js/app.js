@@ -7,9 +7,13 @@ createInertiaApp({
     resolve: async (name) => {
         let page = (await import(`./Pages/${name}`)).default;
 
-        // The logical nullish assignment (x ??= y) operator only assigns if x is nullish (null or undefined).
-        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment
-        page.layout ??= Layout;
+        if (page.layout === undefined) {
+            page.layout = Layout;
+        }
+
+        // // The logical nullish assignment (x ??= y) operator only assigns if x is nullish (null or undefined).
+        // // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment
+        // page.layout ??= Layout;
 
         return page;
     },

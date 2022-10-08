@@ -268,8 +268,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.createInertiaApp)({
   resolve: function () {
     var _resolve = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(name) {
-      var _page$layout;
-
       var page;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) {
@@ -280,9 +278,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
             case 2:
               page = _context.sent["default"];
-              // The logical nullish assignment (x ??= y) operator only assigns if x is nullish (null or undefined).
-              // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment
-              (_page$layout = page.layout) !== null && _page$layout !== void 0 ? _page$layout : page.layout = _Shared_Layout__WEBPACK_IMPORTED_MODULE_3__["default"];
+
+              if (page.layout === undefined) {
+                page.layout = _Shared_Layout__WEBPACK_IMPORTED_MODULE_3__["default"];
+              } // // The logical nullish assignment (x ??= y) operator only assigns if x is nullish (null or undefined).
+              // // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment
+              // page.layout ??= Layout;
+
+
               return _context.abrupt("return", page);
 
             case 5:
