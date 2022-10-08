@@ -37,6 +37,11 @@ Route::middleware('auth')->group(function () {
         ]);
     });
 
+
+    Route::get('/users/create', function () {
+        return Inertia::render('Users/Create');
+    })->middleware('can:create,App\Model\User');
+
     Route::post('/users', function () {
         $attributes = Request::validate([
             'name' => 'required',
@@ -48,10 +53,4 @@ Route::middleware('auth')->group(function () {
 
         return redirect('/users');
     });
-
-
-
-    // Route::get('/users', [UsersController::class, 'index']);
-    Route::get('/users/create', [UsersController::class, 'create']);
-    // Route::post('/users', [UsersController::class, 'store']);
 });
