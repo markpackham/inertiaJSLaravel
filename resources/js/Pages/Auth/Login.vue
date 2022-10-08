@@ -7,7 +7,8 @@
 
             <form @submit.prevent="submit">
                 <div class="mb-6">
-                    <label class="block mb-2 uppercase font-bold text-xs text-gray-700" for="email"> Email </label>
+                    <label class="block mb-2 font-bold text-xs text-gray-700" for="email"> Email:
+                        billy@email.com</label>
 
                     <input v-model="form.email" class="border p-2 w-full rounded" type="email" name="email" id="email"
                         required />
@@ -16,7 +17,8 @@
                 </div>
 
                 <div class="mb-6">
-                    <label class="block mb-2 uppercase font-bold text-xs text-gray-700" for="password"> Password
+                    <label class="block mb-2 font-bold text-xs text-gray-700" for="password"> Password:
+                        password
                     </label>
 
                     <input v-model="form.password" class="border p-2 w-full rounded" type="password" name="password"

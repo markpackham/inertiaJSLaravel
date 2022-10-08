@@ -75,9 +75,9 @@ var _hoisted_4 = {
 };
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "block mb-2 uppercase font-bold text-xs text-gray-700",
+  "class": "block mb-2 font-bold text-xs text-gray-700",
   "for": "email"
-}, " Email ", -1
+}, " Email: billy@email.com", -1
 /* HOISTED */
 );
 
@@ -87,9 +87,9 @@ var _hoisted_7 = {
 };
 
 var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "block mb-2 uppercase font-bold text-xs text-gray-700",
+  "class": "block mb-2 font-bold text-xs text-gray-700",
   "for": "password"
-}, " Password ", -1
+}, " Password: password ", -1
 /* HOISTED */
 );
 
