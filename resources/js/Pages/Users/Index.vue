@@ -58,6 +58,10 @@ let props = defineProps({
 
 let search = ref(props.filters.search);
 
+// debounce only works when the user stops typing in Search, here we use it after 300 milliseconds
+// throttle is another solution, you set a time limit and it only does search requests in the time limit
+// both solutions are to prevent needless requests for everytime a person types a letter in a word
+// throttle is best if your server can handle a lot of request abuse
 watch(search, debounce(function (value) {
     Inertia.get('/users', { search: value }, { preserveState: true, replace: true });
 }, 300));
